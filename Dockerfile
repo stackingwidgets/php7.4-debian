@@ -71,7 +71,7 @@ RUN docker-php-source extract \
     && docker-php-ext-enable opcache  \
     && docker-php-ext-configure gd \
     --with-gd --with-webp-dir --with-jpeg-dir \
-    --with-png-dir --with-zlib-dir --with-xpm-dir --with-freetype \
+    --with-zlib-dir --with-xpm-dir --with-freetype \
     --enable-gd-native-ttf \
     && docker-php-ext-install gd \
     && for i in $(seq 1 3); do pecl install -o redis && s=0 && break || s=$? && sleep 1; done; (exit $s) \
