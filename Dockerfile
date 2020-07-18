@@ -79,8 +79,7 @@ RUN docker-php-source extract \
     && pecl install imagick -y \
     && docker-php-ext-enable imagick
 
-RUN mkdir -p $COMPOSER_HOME \
-    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN { \
     echo 'opcache.memory_consumption=800M'; \
