@@ -19,6 +19,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -q -y \
     tcl \
     nano \
     dos2unix \
+    libonig-dev \
     git \
     acl \
     gnupg2 \
